@@ -37,7 +37,7 @@ const ul = document.getElementById("courses");
 
 docsSnap.forEach((doc) => {
   const li = document.createElement("li");
-  li.innerText = doc.data().courseCode;
+  li.innerText = doc.data().courseName;
   li.id = doc.id;
   li.classList.add('hover-pointer');
   ul.appendChild(li);
