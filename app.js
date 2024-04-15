@@ -29,7 +29,7 @@ import {
 const db = getFirestore();
 
 // Hàm hiển thị tên các môn học lên màn hình
-async function loadCourses() {
+async function displayCourses() {
   const colRef = collection(db, "courses");
   const docsSnap = await getDocs(colRef);
 
@@ -123,7 +123,7 @@ async function loadCourseDetails() {
 window.onload = () => {
   const currentLocation = window.location.pathname;
   if (currentLocation.includes("index.html")) {
-    loadCourses();
+    displayCourses();
   } else if (currentLocation.includes("course-detail.html")) {
     loadCourseDetails();
   }
