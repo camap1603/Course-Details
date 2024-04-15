@@ -120,6 +120,7 @@ async function loadCourseDetails() {
   }
 }
 
+//Điều hướng trang web phù hợp
 window.onload = () => {
   const currentLocation = window.location.pathname;
   if (currentLocation.includes("index.html")) {
